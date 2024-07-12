@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1{
+            font-size: 5rem;
+            box-shadow: 10px 10px 5 px brown;
+        }
+
+        span::before{
+            content: "HTML";
+            animation: text  15s ease-in-out infinite;
+        }
+
+        @keyframes text{
+            0%{
+                content: "HTML";
+                color: aqua;
+            }
+            25%{
+                content: "CSS";
+                color: blue;
+            }
+            50%{
+                content: "JavaScript";
+                color: green;
+            }
+            75%{
+                content: "React";
+                color: brown;
+            }
+            100%{
+                content: "Node Js";
+                color: darkgoldenrod;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>I Love <span></span></h1>
+    </div>
+</body>
+
+</html>
