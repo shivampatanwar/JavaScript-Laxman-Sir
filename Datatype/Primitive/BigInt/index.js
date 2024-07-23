@@ -40,16 +40,20 @@
 // console.log(Boolean(!(-1)));
 
 
+
 // console.log(Boolean(BigInt(0n)));
 // console.log(Boolean(BigInt(1n)));
 
 // console.log(Number(100n)==Number(100n));
 
-
 // console.log("hello"==String("hello"));
+
 
 // console.log(null == undefined);
 // console.log(null === undefined);
+
+
+
 
 
 
