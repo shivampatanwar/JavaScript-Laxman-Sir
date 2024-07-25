@@ -29,7 +29,6 @@
 // console.log(BigInt(2)===2n);
 
 
-
 // console.log(Boolean(!null));
 // console.log(Boolean(!undefined));
 // console.log(Boolean(!""));
