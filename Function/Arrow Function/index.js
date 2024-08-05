@@ -31,8 +31,15 @@
 
 
 
-// 4.  if  arrow function has declared  varible mustt and should braces
+// 4.  when return keyword inside the arrow function we use log statement outside the arrow function
 
-let  a = ()=> {let c = 10; console.log(c);}; a();
+// let  a = ()=>{ return "hello";}
+// console.log(a());
+
+
+
+// 5.  if  arrow function has declared  varible mustt and should braces
+
+// let  a = ()=> {let c = 10; console.log(c);}; a();
 
 
