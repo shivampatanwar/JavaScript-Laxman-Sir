@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>Div1</div>
+    <div>Div2</div>
+
+    <script>
+        let div = document.getElementsByTagName('div');
+        div[0].style.color="red";
+        div[1].style.color="blue";
+
+        div[0].innerHTML = "DIV 1";
+        div[0].style.fontSize = "100px";
+
+        console.log(div);
+
+        div[1].style.display="none ";
+
+    </script>
+</body>
+</html>

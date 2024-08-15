@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HTML</h1>
+    <div id="container">
+        <h1>CSS</h1>
+        <section>Section</section>
+        <h1>JS</h1>
+    </div>
+    <script>
+        let a = document.querySelector('#container');
+        console.log(a.firstElementChild);
+        console.log(a.lastElementChild);
+
+        let section = document.querySelector('section');
+        console.log(section.previousElementSibling);
+        console.log(section.nextElementSibling);
+
+
+        let b = a.querySelectorAll('h1');
+        console.log(b);
+
+
+
+
+
+    </script>
+</body>
+</html>

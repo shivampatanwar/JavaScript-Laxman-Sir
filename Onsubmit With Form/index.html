@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- onsubmit -->
+    <form action="#" onsubmit="">
+        <input type="text" placeholder="Username" id="username"><br><br>
+        <input type="password" placeholder="Password" id="password"> <br><br>
+        <button type="submit">Submit</button><br><br>
+    </form>
+
+    <div></div>
+
+    <script>
+
+        let form = document.querySelector('form');
+        form.addEventListener('click', (e) => {
+            e.preventDefault();
+            let username = document.querySelector('#username').value;
+            let password = document.querySelector('#password').value;
+
+            let div = document.querySelector('div');
+            div.innerText = `Username : ${username} \nPassword : ${password}`;
+            div.style.color = 'red';
+            div.style.fontSize = '25px';
+        })
+    </script>
+
+</body>
+
+</html>

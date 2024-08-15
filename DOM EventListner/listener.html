@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Onclick in button as attribute -->
+    <!-- <button onclick="test()">Click on me</button>
+    <script>
+        function test(){
+            document.body.style.background='red';
+        }
+    </script> -->
+
+
+    <!-- Onclick in js varible.onclick = ()=>{ } -->
+    <!-- <button >Click on me</button>
+    <script>
+        let button = document.querySelector('button');
+        button.onclick=()=>{
+            document.body.style.background='blue';
+        }
+    </script> -->
+
+
+    <!-- Add Event Listner -->
+    <!-- <button id="btn">Click on me</button>
+    <script>
+        let button = document.querySelector('#btn');
+        button.addEventListener('click', function(){
+            document.body.style.background='green';
+        })
+    </script> -->
+
+
+
+
+    <!-- Add Event Listner Add content after button click -->
+    <!-- <button id="btn">
+        Click on me</button>
+    <div></div>
+    <script>
+        let button = document.querySelector('#btn');
+        button.addEventListener('click', function(){
+            let div = document.querySelector('div');
+            //document.body.style.background='green';
+            div.innerText='Hello JavaScript';
+            div.style.color='red';
+        })
+    </script> -->
+
+
+     <!-- Add Event Listner Add content after button click using arrow function -->
+    <button id="btn">Click on me</button>
+    <div id="div" class="4"></div>
+    <script>
+        let button = document.querySelector('#btn');
+        button.addEventListener('click', ()=>{
+           // let div = document.querySelector('div');
+            let div = document.querySelector('#div');
+            //document.body.style.background='green';
+            div.innerText='Hello JavaScript';
+            div.style.color='red';
+            div.style.fontSize='50px';
+        })
+    </script>
+    
+</body>
+</html>

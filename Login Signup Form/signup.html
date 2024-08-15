@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+   <div class="formdiv">
+    <form action="">
+        <h2>SignUp</h2> 
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobile No">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <button type="submit">SignUp</button>
+       
+        <div class="anchor">
+            <span>Already have an Account click </span> <a href="login.html">Login</a>
+        </div>
+    </form>
+   </div>
+
+   <script>
+    let btn = document.querySelector('button');
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let name = document.querySelector('#name');
+        let email = document.querySelector('#email');
+        let mobile = document.querySelector('#mobile');
+        let password = document.querySelector('#password');
+
+        console.log(`Email: ${email.value}, Email : ${email.value}, Mobile : ${mobile.value}, Password : ${password.value}`);
+    })
+</script>
+</body>
+</html>

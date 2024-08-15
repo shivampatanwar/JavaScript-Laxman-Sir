@@ -4,8 +4,9 @@ let arr = [500, 600, 900, 700, 5000, 9000];
 
 
 //map
-let map=arr.map((value)=>{
-    return value+10;
+let map=arr.map((value)=>{fxxx
+    // return value+10;
+    return value*1.18;
 })
 
 

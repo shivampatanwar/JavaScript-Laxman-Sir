@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" >
+
+    <script>
+        let input = document.querySelector('input');
+
+        input.addEventListener('keyup', ()=>{
+            /*
+            let random= (1000000+Math.ceil(Math.random()*1000000)).toString(15);
+            console.log(random);
+            document.body.style.backgroundColor=`#${random}`
+            */
+        })
+
+        input.addEventListener('keydown', ()=>{
+            let random= (1000000+Math.ceil(Math.random()*1000000)).toString(15);
+            console.log(random);
+            document.body.style.backgroundColor=`#${random}`
+        })
+    </script>
+
+</body>
+</html>

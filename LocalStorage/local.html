@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        <h2>SignUp</h2>
+        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobile No"><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br>
+        <button type="submit" onclick="signup()">SignUp</button>
+
+    </form>
+
+
+    <form action="" method="post">
+        <h2>Login</h2> 
+        <input type="email" name="email" id="loginemail" placeholder="Email"> <br>
+        <input type="password" name="password" id="loginpassword" placeholder="Password"> <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+
+    
+    <script>
+
+
+
+        function signup() {
+
+
+            let obj = {
+                name : document.querySelector('#name').value,
+                email : document.querySelector('#email').value,
+                mobile : document.querySelector('#mobile').value,
+                password : document.querySelector('#password').value
+            }
+
+            window.localStorage.setItem(obj.email, JSON.stringify(obj));
+
+            let ob = JSON.parse(localStorage.getItem(obj.email));
+            location.href="local.html";
+            console.log(ob);
+
+        }
+
+
+        function login() {
+
+            let obj = {
+                email: document.querySelector('#loginemail').value,
+                password : document.querySelector('#loginpassword').value
+            }
+
+            let ob = JSON.parse(localStorage.getItem(obj.email));
+            console.log(ob);
+
+            if(ob.email === obj.email && ob.password === obj.password){
+                //location.href="https://www.youtube.com";
+                location.href="home.html";
+                alert("Login Succesfully")
+            }else{
+
+                if(ob.email !== obj.email){
+                    alert("Invalid Email");
+                }
+                if(obj.email === ""){
+                    alert("Email Field is Mandatory");
+                }
+                if(obj.password === ""){
+                    alert("Password Field is Mandatory");
+                }
+                if(obj.password === "" && obj.email === ""){
+                    alert("Email and Password Field is Mandatory");
+                }
+                if(obj.password === "" && obj.email === ""){
+                    alert("Invalid Password");
+                }
+
+
+                if(ob.password !== obj.password){
+                    alert("Incorrect Password ");
+                }
+            }
+            
+           
+
+        }
+
+
+
+
+
+        /*
+        console.log(ob.name);
+        console.log(ob.email);
+        console.log(ob.mobile);
+        */
+    </script>
+</body>
+
+</html>

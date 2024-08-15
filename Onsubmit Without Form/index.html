@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Username" id="username"><br><br>
+    <input type="password" placeholder="Password" id="password"> <br><br>
+    <button>Submit</button><br><br>
+
+    <div></div>
+
+    <script>
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', ()=>{
+            let username= document.querySelector('#username').value;
+            let password= document.querySelector('#password').value;
+
+            let div = document.querySelector('div');
+            div.innerText=`Username : ${username} \nPassword : ${password}`;
+            div.style.color='red';
+            div.style.fontSize='25px';
+        })
+    </script>
+    
+</body>
+</html>

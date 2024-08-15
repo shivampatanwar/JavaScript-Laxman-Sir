@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let table = document.createElement('table');
+
+        let tr1 = document.createElement('tr');
+        let tr2 = document.createElement('tr');
+        let tr3 = document.createElement('tr');
+
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+        let td4 = document.createElement('td');
+        let td5 = document.createElement('td');
+        let td6 = document.createElement('td');
+        let td7 = document.createElement('td');
+        let td8 = document.createElement('td');
+        let td9 = document.createElement('td');
+
+
+        td1.innerText = '1'
+        tr1.append(td1);
+        td2.innerText = '2'
+        tr1.append(td2);
+        td3.innerText = '3'
+        tr1.append(td3);
+        table.append(tr1);
+
+        td4.innerText = '4'
+        tr2.append(td4);
+        td5.innerText = '5    '
+        tr2.append(td5);
+        td6.innerText = '6'
+        tr2.append(td6);
+        table.append(tr2);
+
+        td7.innerText = '7'
+        tr3.append(td7);
+        td8.innerText = '8'
+        tr3.append(td8);
+        td9.innerText = '9'
+        tr3.append(td9);
+        table.append(tr3);
+
+        //console.log(table);
+
+        table.setAttribute("border", "10");
+        table.setAttribute("cellspacing", "20px");
+        table.setAttribute("cellpadding", "20px");
+
+
+        document.body.append(table);
+        //td.setAttribute("class", "td");
+
+
+        let td = document.querySelectorAll('td');
+        for (let a = 0; a < 9; a++) {
+            let rancolor = Math.floor(1000000 + Math.random() * 1000000).toString(15);
+            console.log(rancolor);
+            td[a].style.backgroundColor = "#" + rancolor;
+            td[a].style.color = "white";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

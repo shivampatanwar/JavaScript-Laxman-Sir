@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- <script>
+       let promise=new Promise((resolve, reject)=>{
+
+        let isCleaned = false;
+
+        if(isCleaned){
+            resolve("Yes room is Cleaned");
+
+        }else{
+            reject("no still dust is there");
+        }
+
+       });
+       console.log(promise);
+
+       promise.then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+
+       
+
+    </script> -->
+
+
+    <script>
+
+        //fetch("https://cataas.com/api/cats?tags=cute").then((resp)=> resp.json()).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+
+
+
+        fetch("./data.json")
+            .then((resp) => resp.json())
+            .then((data) => { console.log(data); })
+            .catch((error) => { console.log(error); })
+
+    </script>
+</body>
+
+</html>

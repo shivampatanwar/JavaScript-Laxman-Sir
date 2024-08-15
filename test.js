@@ -1,9 +1,14 @@
-// console.log(typeof [12,12]);
+
+
+(function() {
+    var a = b = 50;
+})
+();
+
+// console.log(a);  
+console.log(b
+    
+);
 
 
 
-let arr = [1, 2, 3, 4, 5];
-
-arr.forEach((v, i)=>{
-    console.log(i, v);
-})  

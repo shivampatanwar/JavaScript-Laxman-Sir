@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+   <div class="formdiv">
+    <form action="">
+        <h2>Login</h2> 
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <button type="submit">Login</button>
+       
+        <div class="anchor">
+            <span>Want to Register click </span> <a href="signup.html">Register</a>
+        </div>
+    </form>
+   </div>
+
+   <script>
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            let email = document.querySelector('#email');
+            let password = document.querySelector('#password');
+
+            console.log(`Email: ${email.value}, Password : ${password.value}`);
+        })
+   </script>
+</body>
+</html>

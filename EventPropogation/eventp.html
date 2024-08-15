@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #gp{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #p{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #c{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="gp">
+        <div id="p">
+            <div id="c">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let gp = document.getElementById('gp');
+        let p = document.getElementById('p');
+        let c = document.getElementById('c');
+
+
+       /* gp.addEventListener('click', (e)=>{
+           // console.log(e);   
+            console.log(e.target);
+        }) */
+
+
+        document.addEventListener('click', (e)=>{
+            console.log('document captured');
+            console.log(e);
+        },{capture:true})
+
+        document.addEventListener('click', (e)=>{
+            console.log('document bubble');
+        })
+
+        gp.addEventListener('click', (e)=>{
+            console.log('GP captured');
+            e.stopPropagation();
+        },{capture:true})
+
+        gp.addEventListener('click', (e)=>{
+            console.log('GP bubble');
+        })
+
+        p.addEventListener('click', (e)=>{
+            console.log('P captured');
+        },{capture:true})
+
+        p.addEventListener('click', (e)=>{
+            console.log('P bubble');
+        })
+
+
+        c.addEventListener('click', (e)=>{
+            console.log('C captured');
+        },{capture:true})
+
+        c.addEventListener('click', (e)=>{
+            console.log('C bubble');
+        })
+    </script>
+</body>
+</html>
