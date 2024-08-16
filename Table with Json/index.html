@@ -7,54 +7,56 @@
     <title>Document</title>
 
     <style>
-        .tablediv {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-            flex-direction: column;
-        }
+            .tablediv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 50px;
+                flex-direction: column;
+            }
 
-        table {
-            border-collapse: collapse;
-            width: 80%;
-        }
+                table {
+                    border-collapse: collapse;
+                    width: 80%;
+                }
 
-        td,
-        th {
-            border: 1px solid black;
-            height: 25px;
-        }
+                td,
+                th {
+                    border: 1px solid black;
+                    height: 25px;
+                }
 
-        td {
-            padding-left: 15px;
-        }
+                td {
+                    padding-left: 15px;
+                }
 
-        .btn1, .btn2 {
-            text-align: center;
-            padding-left: 0;
-        }
+                .btn1,
+                .btn2 {
+                    text-align: center;
+                    padding-left: 0;
+            }
 
-        .btn1 button {
-            background-color: green;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 3px 10px;
-        }
-        .btn2 button {
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 3px 10px;
-        }
+            .btn1 button {
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 3px 10px;
+            }
 
-        .addrecordiv{
+            .btn2 button {
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 3px 10px;
+            }
+
+        .addrecordiv {
             padding: 50px 130px 50px;
         }
 
-        .addrecord{
+        .addrecord {
             background-color: green;
             border: none;
             border-radius: 5px;
@@ -62,7 +64,44 @@
             padding: 8px 15px;
         }
 
-        
+        .formdiv {
+            padding: 50px 130px 50px;
+        }
+
+
+        form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            padding: 8px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100px;
+            padding: 8px 10px;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            color: white;
+
+        }
+
+
+        .form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #updatediv{
+            display: none;
+        }
     </style>
 </head>
 
@@ -83,85 +122,48 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody id="tbody">
             </tbody>
 
 
         </table>
 
-        
+
 
 
     </div>
 
-    <div class="addrecordiv">
+
+    <!-- <div class="addrecordiv">
         <button class="addrecord" onclick="addRecord()">Add Record</button>
+    </div> -->
+
+    <div class="form">
+        <div class="formdiv">
+            <form action="">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="mobile" placeholder="Mobile">
+                <input type="text" id="city" placeholder="City">
+    
+                <button type="submit" id="add">Add</button>
+            </form>
+        </div>
+
+        <div class="formdiv" id="updatediv">
+            <form action="">
+                <input type="text" id="uname" placeholder="Name">
+                <input type="email" id="uemail" placeholder="Email">
+                <input type="tel" id="umobile" placeholder="Mobile">
+                <input type="text" id="ucity" placeholder="City">
+    
+                <button type="submit" id="update">Update</button>
+            </form>
+        </div>
     </div>
 
 
-    <script>
-        let tbody = document.querySelector('tbody');
-
-        fetch('index.json')
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                data.forEach((value, key) => {
-                    let tr = document.createElement('tr');
-
-                    console.log(key);
-
-                    tr.innerHTML = `  
-                       
-                            <td>${value.id}</td>
-                            <td>${value.name}</td>
-                            <td>${value.email}</td>
-                            <td>${value.mobile}</td>
-                            <td>${value.city}</td>
-                            <td class="btn1"><button onclick="editRecord(${key})">Edit</button></td>
-                            <td class="btn2"><button onclick="deleteRecord(${key})">Delete</button></td>
-                        `;
-
-                    tbody.appendChild(tr);
-                });
-            });
-
-
-            function addRecord(){
-
-                fetch('index.json')
-                .then((res) => res.json())
-                .then((data) => {
-
-                    let a = {
-                        "id" : 5
-                    }
-                    
-                    data.push(a);
-                });
-
-               
-
-            }
-
-            function deleteRecord(key){
-
-                fetch('index.json')
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(data);
-                    data.splice(key, key+1);
-                });
-
-            }
-
-
-
-
-
-    </script>
-
-
+    <script src="index.js"></script>
 
 </body>
 

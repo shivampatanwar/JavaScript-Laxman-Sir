@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let data1= {
+            name: "shivam",
+            email: "shivampatanwar@gmail.com"
+        }
+
+        let data2= {
+            mobile: 9685430664,
+            dist: "Bilaspur"
+        }
+
+        let data3= {
+            state: "Chhattisgarh",
+            nation: "India"
+        }
+
+        data1.__proto__= data2;
+        data2.__proto__= data3;
+
+        console.log(data1.name);
+        console.log(data1.email);
+        console.log(data1.mobile);
+        console.log(data1.dist);
+        console.log(data1.state);
+        console.log(data1.nation);
+
+    </script>
+</body>
+</html>

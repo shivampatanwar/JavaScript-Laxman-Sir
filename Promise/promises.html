@@ -9,6 +9,119 @@
 
 <body>
 
+    <!-- <script>
+        let promise1= new Promise((resolve, reject)=>{
+            let isResolved= true;
+            if(isResolved){
+                resolve("Promise1 Resolved");
+            }else{
+                reject("Promise1 Rejected");
+            }
+
+        })
+
+        let promise2= new Promise((resolve, reject)=>{
+            let isResolved= false;
+            if(isResolved){
+                resolve("Promise2 Resolved");
+            }else{
+                reject("Promise2 Rejected");
+            }
+
+        })
+
+        let promise3= new Promise((resolve, reject)=>{
+            let isResolved= true;
+            if(isResolved){
+                resolve("Promise3 Resolved");
+            }else{
+                reject("Promise3 Rejected");
+            }
+
+        })
+
+        //Promise.all([promise1, promise2, promise3]).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+
+       //Promise.any([promise1, promise2, promise3]).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+
+       //Promise.race([promise1, promise2, promise3]).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+       //Promise.allSettled([promise1, promise2, promise3]).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+    </script> -->
+
+
+
+    <!-- <script>    
+
+        let promise1 = new Promise((resolve, reject)=>{
+            let isResolved= true;
+
+            setTimeout(()=>{
+                if(isResolved){
+                    resolve("Promise1 Resolved");
+                }else{
+                    reject("Promise1 Rejected");
+                }
+            }, 3000);
+
+            
+        })
+
+
+        let promise2 = new Promise((resolve, reject)=>{
+            let isResolved= true;
+
+            setTimeout(()=>{
+                if(isResolved){
+                    resolve("Promise2 Resolved");
+                }else{
+                    reject("Promise2 Rejected");
+                }
+            }, 500);
+
+            
+        })
+
+
+        let promise3 = new Promise((resolve, reject)=>{
+            let isResolved= true;
+
+            setTimeout(()=>{
+                if(isResolved){
+                    resolve("Promise3 Resolved");
+                }else{
+                    reject("Promise3 Rejected");
+                }
+            }, 1000);
+
+            
+        })
+
+    
+      
+
+       Promise.race([promise1, promise2, promise3]).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function promises() {
+            return new Promise((res, rej) => {
+                //res("Promise is resolved");
+                rej("Promise is Rejected");
+            })
+        }
+
+
+        //console.log(promises());
+        //console.log(promises().then((data) => { console.log(data); }));
+        console.log(promises().catch((error) => { console.log(error); }));
+    </script> -->
+
 
     <!-- <script>
        let promise=new Promise((resolve, reject)=>{
@@ -33,7 +146,7 @@
     </script> -->
 
 
-    <script>
+    <!-- <script>
 
         //fetch("https://cataas.com/api/cats?tags=cute").then((resp)=> resp.json()).then((data)=>{console.log(data);}).catch((error)=>{console.log(error);})
 
@@ -45,7 +158,7 @@
             .then((data) => { console.log(data); })
             .catch((error) => { console.log(error); })
 
-    </script>
+    </script> -->
 </body>
 
 </html>
