@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Shivam Patanwar",
+        "email": "shivampatanwar@gmail.com",
+        "mobile": 9685430664,
+        "city": "Bilaspur"
+    },
+
+    {
+        "id": 2,
+        "name": "Satyam Patanwar",
+        "email": "satyampatanwar@gmail.com",
+        "mobile": 9644708454,
+        "city": "Bilaspur"
+    },
+
+    {
+        "id": 3,
+        "name": "Vivek Patanwar",
+        "email": "vivekpatanwar@gmail.com",
+        "mobile": 8745895647,
+        "city": "Raipur"
+    },
+
+    {
+        "id": 4,
+        "name": "Shubham Patanwar",
+        "email": "shubhampatanwar@gmail.com",
+        "mobile": 7008596478,
+        "city": "Raipur"
+    },
+
+    {
+        "id": 5,
+        "name": "Prakash Patanwar",
+        "email": "Prakashpatanwar@gmail.com",
+        "mobile": 9856478569,
+        "city": "Korba"
+    }
+
+]

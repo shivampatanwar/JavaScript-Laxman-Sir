@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*
+        async function demo(){
+            return await fetch("data.json").then((resp)=> resp.json());
+        }
+
+        demo().then((data)=>{console.log(data);});
+        */
+
+        async function demo(){
+            return          fetch("data.json").then((resp)=> resp.json());
+        }
+
+        demo().then((data)=>{console.log(data);});
+
+
+
+        async function demo1(){
+            let data = await fetch("data.json");
+            console.log(data);
+
+             let data1 = await data.json();
+             console.log(data1);
+        }
+
+        demo1();
+    </script>
+</body>
+</html>
